@@ -4,9 +4,12 @@
 
 #ifndef UNTITLED2_SEDEPRINCIPAL_H
 #define UNTITLED2_SEDEPRINCIPAL_H
+
 #include <iostream>
 #include <sstream>
+
 using namespace std;
+
 class SedePrincipal {
 private :
     int num_limonada;

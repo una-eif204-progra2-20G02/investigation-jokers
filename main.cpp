@@ -2,17 +2,29 @@
 #include "SedePrincipal.h"
 
 using namespace std;
+
 // Fabrica de limonada 1
 int main() {
-SedePrincipal* sedeprinc=SedePrincipal::getInstance();
+    SedePrincipal *sedeprinc = SedePrincipal::getInstance();
 
-    int num_botellas_producidas = 55;
-    sedeprinc->addLimonada(num_botellas_producidas);
+    int numBotellasLimonada = 55;
+    sedeprinc->addLimonada(numBotellasLimonada);
 
-cout<<sedeprinc->getNumLimonada();
+    cout << sedeprinc->getNumLimonada() << endl;
     // Imprimirá 55
 
-cout<<sedeprinc->getNumCola();
+    cout << sedeprinc->getNumCola() << endl;
     // Imprimirá 0
-return 0;
+    SedePrincipal *sedeprinc2 = SedePrincipal::getInstance();
+
+    int numBotellasLimonada2 = 55;
+    int numBotellasCola2 = 40;
+    sedeprinc2->addLimonada(numBotellasLimonada2);
+    sedeprinc2->addCola(numBotellasCola2);
+    cout << sedeprinc2->getNumLimonada() << endl;
+    // Imprimirá 110
+
+    cout << sedeprinc2->getNumCola();
+    // Imprimirá 40
+    return 0;
 }
