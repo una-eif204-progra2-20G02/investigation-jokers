@@ -3,6 +3,7 @@
 //
 
 #include "SedePrincipal.h"
+
 void SedePrincipal::addCola(int num) {
     num_cola += num;
 }
@@ -21,11 +22,16 @@ int SedePrincipal::getNumLimonada() {
     return num_limonada;
 }
 
+
+
+SedePrincipal::~SedePrincipal() {}
+
+/* Null, because instance will be initialized on demand. */
+SedePrincipal* SedePrincipal::instance = nullptr;
+
 SedePrincipal *SedePrincipal::getInstance() {
     if (!instance) {
         instance = new SedePrincipal();
     }
     return instance;
 }
-
-SedePrincipal::~SedePrincipal() {}
