@@ -3,28 +3,30 @@
 
 using namespace std;
 
-// Fabrica de limonada 1
+// Fabrica 1
 int main() {
-    SedePrincipal *sedeprinc = SedePrincipal::getInstance();
+    SedePrincipal *sedePrinc = SedePrincipal::getInstance();
 
     int numBotellasLimonada = 55;
-    sedeprinc->addLimonada(numBotellasLimonada);
+    sedePrinc->addLimonada(numBotellasLimonada);
 
-    cout << sedeprinc->getNumLimonada() << endl;
+    cout << sedePrinc->getNumLimonada() << endl;
     // Imprimirá 55
 
-    cout << sedeprinc->getNumCola() << endl;
+    cout << sedePrinc->getNumCola() << endl;
     // Imprimirá 0
-    SedePrincipal *sedeprinc2 = SedePrincipal::getInstance();
+
+    // Fabrica 2
+    SedePrincipal *sedePrinc2 = SedePrincipal::getInstance();
 
     int numBotellasLimonada2 = 55;
     int numBotellasCola2 = 40;
-    sedeprinc2->addLimonada(numBotellasLimonada2);
-    sedeprinc2->addCola(numBotellasCola2);
-    cout << sedeprinc2->getNumLimonada() << endl;
+    sedePrinc2->addLimonada(numBotellasLimonada2);
+    sedePrinc2->addCola(numBotellasCola2);
+    cout << sedePrinc2->getNumLimonada() << endl;
     // Imprimirá 110
 
-    cout << sedeprinc2->getNumCola();
+    cout << sedePrinc2->getNumCola();
     // Imprimirá 40
     return 0;
 }
